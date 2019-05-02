@@ -5,8 +5,10 @@ using System.Text;
 
 namespace LibCore
 {
-    public interface ITicket : IQueueNotification
+    public interface ITicket
     {
+        IQueueNotification IQueueNotification { get; set; }
+
         void CreateTicket();
         void CreateTicketComentario();
         /// <summary>

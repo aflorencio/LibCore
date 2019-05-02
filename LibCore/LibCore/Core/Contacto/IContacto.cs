@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LibCore
 {
-    public interface IContactos : IFlow, ITicket
+    public interface IContacto
     {
+        IFlow IFlow { get; set; }
+        ITicket ITicket { get; set; }
+
         /// <summary>
         /// Crea un nuevo Rastreo, solo el rastreo sin los enlaces.
         /// </summary>
@@ -14,7 +18,7 @@ namespace LibCore
         /// - Al crear un contacto nuevo se insertara en el FlowService. (RabbitMQ)
         ///  -Al crear lo inserto en ticketService. (RabbitMQ)
         /// </remarks>
-        void CreateContacto();
+        void CreateContacto(string nombre, string apellidos, string dni, string cif, string direccion, string localidad, string provincia, string cp, string pais, string telefono1, string telefono2, string email1, string email2, string langNative, string particularEmpresa, string descripcionCaso, string fuenteCliente);
         /// <summary>
         /// Modifica contacto CRUD
         /// </summary>
@@ -22,7 +26,7 @@ namespace LibCore
         /// <summary>
         /// Lee todos los contactos de la base de datos CRUD
         /// </summary>
-        void ReadAllContacto();
+        Task<string> ReadAllContacto();
         /// <summary>
         /// Muestra la informacion de un contacto CRUD
         /// </summary>
@@ -32,13 +36,16 @@ namespace LibCore
         /// </summary>
         void DeleteContacto();
         /// <summary>
-        /// Return si un contacto a tenido una toma de contacto. TRUE o FALSE
+        /// Retorna el estado de la toma de contacto.
         /// </summary>
-        bool TomaDeContacto();
+        void TomaDeContacto();
         /// <summary>
         /// Modifica el estado de la toma de contacto TRUE o FALSE
         /// </summary>
-        bool TomaDeContacto(bool edit);
+        void TomaDeContacto(bool edit);
+        /// <summary>
+        /// Mostrará solo los contactos de un trabajador
+        /// </summary>
         void ReadEmployeeContacto();
     }
 }

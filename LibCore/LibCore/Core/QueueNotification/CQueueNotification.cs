@@ -7,7 +7,8 @@ namespace LibCore
 {
     public class CQueueNotification : IQueueNotification
     {
-        public void AddpiorityNotification()
+
+        public void AddPriorityNotification()
         {
             throw new System.NotImplementedException();
         }

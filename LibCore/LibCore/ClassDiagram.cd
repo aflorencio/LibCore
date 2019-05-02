@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="LibCore.CContactos">
-    <Position X="0.5" Y="13.5" Width="2" />
+  <Class Name="LibCore.CContacto">
+    <Position X="0.5" Y="11.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAABCAAA=</HashCode>
-      <FileName>Core\Contacto\CContactos.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAgAAAABAAAEgBEAAAARCAAA=</HashCode>
+      <FileName>Core\Contacto\CContacto.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CRastreo">
-    <Position X="2.75" Y="13.5" Width="2" />
+    <Position X="3.25" Y="11.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAQACAAAAAAAAAAAAAIAAAAQAAAAAIAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAQACABAAAAAAAACAAIgAAAQAAAAAoAAAAAAQAAEA=</HashCode>
       <FileName>Core\Rastreo\CRastreo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CFlow">
-    <Position X="0.5" Y="10.75" Width="2.25" />
+    <Position X="2.5" Y="7.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AgABAAAAAgAAAACAAQAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Flow\CFlow.cs</FileName>
@@ -25,72 +25,105 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CTicket">
-    <Position X="3" Y="10.75" Width="2.5" />
+    <Position X="5" Y="7.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAgAAAAAAAAAAAAAAgAAAAAgEACAIAAAAAAAEA=</HashCode>
+      <HashCode>EABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
       <FileName>Core\Ticket\CTicket.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CQueueNotification">
-    <Position X="5.75" Y="10.75" Width="2.5" />
+    <Position X="7.75" Y="7.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgCABAAABAAQAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgCABAAABAAAAAAAAAAAAAEAAAAAACA=</HashCode>
       <FileName>Core\QueueNotification\CQueueNotification.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="LibCore.Main">
-    <Position X="7.75" Y="7.5" Width="1.5" />
+  <Class Name="LibCore.MContacto">
+    <Position X="0.5" Y="16.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAlAAQEIECkAABIAgAAAIACAAAAAAAABARAAAM=</HashCode>
+      <FileName>Core\Contacto\MContacto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibCore.MLoadBalancer">
+    <Position X="3.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAACAA=</HashCode>
+      <FileName>Core\LoadBalancer\MLoadBalancer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibCore.QLoadBalancer">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QLoadBalancer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibCore.Start">
+    <Position X="0.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="LibCore.IRastreo">
-    <Position X="3.5" Y="6.75" Width="2.5" />
+    <Position X="3.5" Y="3.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQACABAAAAAAAACAAIAAAAQAAAAAIAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAQACABAAAAAAAACAAIgAAAQAAAAAoAAAAAAQAAEA=</HashCode>
       <FileName>Core\Rastreo\IRastreo.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IFlow" />
+      <Property Name="ITicket" />
+      <Property Name="IQueueNotification" />
+    </ShowAsAssociation>
   </Interface>
-  <Interface Name="LibCore.IContactos">
-    <Position X="0.5" Y="6.75" Width="2.75" />
+  <Interface Name="LibCore.IContacto">
+    <Position X="0.5" Y="3.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAABAAAEAAEAAAARCAAA=</HashCode>
-      <FileName>Core\Contacto\IContactos.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAgAAAABAAAEgAEAAAARCAAA=</HashCode>
+      <FileName>Core\Contacto\IContacto.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IFlow" />
+      <Property Name="ITicket" />
+    </ShowAsAssociation>
   </Interface>
   <Interface Name="LibCore.IFlow">
-    <Position X="0.5" Y="3.5" Width="2.25" />
+    <Position X="0.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AgABAAAAAgAAAACAAQAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Flow\IFlow.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LibCore.ITicket">
-    <Position X="3" Y="3.5" Width="2.5" />
+    <Position X="3" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAAAAEA=</HashCode>
+      <HashCode>EABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
       <FileName>Core\Ticket\ITicket.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IQueueNotification" />
+    </ShowAsAssociation>
   </Interface>
   <Interface Name="LibCore.IAuth">
-    <Position X="8.5" Y="4.5" Width="1.5" />
+    <Position X="8.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Auth\IAuth.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LibCore.IQueueNotification">
-    <Position X="5.75" Y="3.5" Width="2.5" />
+    <Position X="5.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgCABAAABAAAAAAAAAAAAAEAAAAAACA=</HashCode>
       <FileName>Core\QueueNotification\IQueueNotification.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="LibCore.ILog">
-    <Position X="8.5" Y="3.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Log\ILog.cs</FileName>

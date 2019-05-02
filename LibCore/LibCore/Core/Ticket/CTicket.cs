@@ -7,6 +7,8 @@ namespace LibCore
 {
     public class CTicket : ITicket
     {
+        public IQueueNotification IQueueNotification { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void CreateTicket()
         {
             throw new System.NotImplementedException();
@@ -27,7 +29,7 @@ namespace LibCore
             throw new System.NotImplementedException();
         }
 
-        public void ReadAllTicketbyRol()
+        public void ReadAllTicketByRol()
         {
             throw new System.NotImplementedException();
         }
@@ -37,7 +39,7 @@ namespace LibCore
             throw new System.NotImplementedException();
         }
 
-        public void ReadTicketbyFlow()
+        public void ReadTicketByFlow()
         {
             throw new System.NotImplementedException();
         }

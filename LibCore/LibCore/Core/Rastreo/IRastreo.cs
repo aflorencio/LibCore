@@ -5,13 +5,16 @@ using System.Text;
 
 namespace LibCore
 {
-    public interface IRastreo : IQueueNotification, IFlow, ITicket
+    public interface IRastreo
     {
         /// <summary>
         /// Mostrará TRUE o FALSE dependiendo si tiene la solicitud de rastreo o no.
         /// </summary>
         /// <remarks>Esto sera muy util y tiene que estar agregado en la base de datos como "solicitud de rastreo" del tipo bool para determinar en el caso de que un rastreo esté cerrado y se vuelva abrir si tiene que notificar solo al comercial o al comercial y al rastreador de que se ha vuelto abrir el rastreo.</remarks>
         bool solicitudRastreo { get; set; }
+        IFlow IFlow { get; set; }
+        ITicket ITicket { get; set; }
+        IQueueNotification IQueueNotification { get; set; }
 
         /// <summary>
         /// Crea un nuevo Rastreo, solo el rastreo sin los enlaces.
@@ -33,15 +36,15 @@ namespace LibCore
         /// <summary>
         /// Return bool si el rastreo se ha terminado o no.
         /// </summary>
-        Bool RastreoFinalizado();
+        void RastreoFinalizado();
         /// <summary>
-        /// Modifica el estado del rastreo.
+        /// Modifica el estado del rastreo
         /// </summary>
         /// <remarks>
         /// - En el caso que esté finalizado TRUE y se vuelva a poner como abierto FALSE por ejemplo cuando se añada otro enlace; abierto es FALSO. Se mandara a flow como "Se ha vuelto abrir rastreo" y se notificará de nuevo a QueueNotification. En el caso de que se solicitara a los rastreadores lo notificaria.
         /// - Comprobaremos en que si ha existido una notificacion de rastreo anteriormente. Si ha existido una notificacion. Volveremos a rastrear si no. solo lo enviará a comercial. TODO ESO O añadir un campo que sea solicitud de rastreo TRUE FALSE
         /// </remarks>
-        Bool RastreoFinalizado(bool edit);
+        void RastreoFinalizado(bool edit);
 
         /// <summary>
         /// Inserta un link en el sistema de la DB
