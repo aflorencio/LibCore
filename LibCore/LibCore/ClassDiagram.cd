@@ -58,7 +58,7 @@
     <Position X="10.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>QLoadBalancer.cs</FileName>
+      <FileName>Core\LoadBalancer\QLoadBalancer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibCore.Start">
@@ -67,6 +67,14 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="LibCore.CPresupuesto">
+    <Position X="5.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CPresupuesto.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="LibCore.IRastreo">
     <Position X="3.5" Y="3.75" Width="2.5" />
@@ -128,6 +136,24 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\Log\ILog.cs</FileName>
     </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibCore.IPresupuesto">
+    <Position X="6.25" Y="3.75" Width="3" />
+    <AssociationLine Name="IQueueNotification" Type="LibCore.IQueueNotification">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.12" Y="0.06" Height="0.162" Width="1.194" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAAgAKgAAAAACAAAgAAAAACQQAAA=</HashCode>
+      <FileName>IPresupuesto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IFlow" />
+      <Property Name="ITicket" />
+      <Property Name="IQueueNotification" />
+      <Property Name="IContacto" />
+    </ShowAsAssociation>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

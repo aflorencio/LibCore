@@ -42,7 +42,7 @@ namespace LibCore
         /// <summary>
         /// Modifica el estado de la toma de contacto TRUE o FALSE
         /// </summary>
-        void TomaDeContacto(bool edit);
+        void TomaDeContacto(bool edit, string id);
         /// <summary>
         /// Mostrará solo los contactos de un trabajador
         /// </summary>

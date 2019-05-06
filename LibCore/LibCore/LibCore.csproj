@@ -77,6 +77,8 @@
     <Compile Include="Core\Contacto\IContacto.cs" />
     <Compile Include="Core\Rastreo\IRastreo.cs" />
     <Compile Include="Core\Log\ILog.cs" />
+    <Compile Include="CPresupuesto.cs" />
+    <Compile Include="IPresupuesto.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Core\Contacto\MContacto.cs" />
     <Compile Include="Core\LoadBalancer\MLoadBalancer.cs" />
@@ -88,7 +90,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="QLoadBalancer.cs" />
+    <Compile Include="Core\LoadBalancer\QLoadBalancer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
