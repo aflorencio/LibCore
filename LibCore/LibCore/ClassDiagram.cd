@@ -27,7 +27,7 @@
   <Class Name="LibCore.CTicket">
     <Position X="5" Y="7.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
+      <HashCode>AABAAgggAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
       <FileName>Core\Ticket\CTicket.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -68,14 +68,6 @@
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LibCore.CPresupuesto">
-    <Position X="5.5" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CPresupuesto.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Interface Name="LibCore.IRastreo">
     <Position X="3.5" Y="3.75" Width="2.5" />
     <TypeIdentifier>
@@ -109,7 +101,7 @@
   <Interface Name="LibCore.ITicket">
     <Position X="3" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
+      <HashCode>AABAAgggAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
       <FileName>Core\Ticket\ITicket.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

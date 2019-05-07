@@ -94,7 +94,7 @@ namespace LibCore
             throw new System.NotImplementedException();
         }
 
-        public void TomaDeContacto(bool edit)
+        public void TomaDeContacto(bool edit, string id)
         {
             throw new System.NotImplementedException();
         }
