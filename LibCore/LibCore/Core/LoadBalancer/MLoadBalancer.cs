@@ -7,12 +7,23 @@ using System.Text;
 
 namespace LibCore
 {
+
+    public class MLoadBalancer
+    {
+        public ObjectId _id { get; set; }
+        [BsonIgnoreIfNull]
+        public FlowService FlowService { get; set; }
+        [BsonIgnoreIfNull]
+        public ContactoService ContactoService { get; set; }
+
+    }
+
     public class Server
     {
         [BsonIgnoreIfNull]
         public string url { get; set; }
         [BsonIgnoreIfNull]
-        public int status { get; set; }
+        public string status { get; set; }
     }
 
     public class Db
@@ -20,7 +31,7 @@ namespace LibCore
         [BsonIgnoreIfNull]
         public string url { get; set; }
         [BsonIgnoreIfNull]
-        public int status { get; set; }
+        public string status { get; set; }
     }
 
     public class FlowService
@@ -39,13 +50,4 @@ namespace LibCore
         public Db db { get; set; }
     }
 
-    public class MLoadBalancer
-    {
-        public ObjectId _id { get; set; }
-        [BsonIgnoreIfNull]
-        public FlowService FlowService { get; set; }
-        [BsonIgnoreIfNull]
-        public ContactoService ContactoService { get; set; }
-
-    }
 }

@@ -23,6 +23,7 @@ namespace LibCore
         {
             // var gola =  balancerData.flowService.server.FirstOrDefault();
 
+            #region CREATE USUARIO
             var client = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
             var response = client.PostRequest("contacto").
 
@@ -46,14 +47,16 @@ namespace LibCore
                 AddFormParameter("descripcionCaso", descripcionCaso == "" ? null : descripcionCaso).
                 AddFormParameter("fuentePosibleCliente", fuenteCliente == "" ? null : fuenteCliente).
                 ExecuteAsync<bool>();
+            #endregion
 
+            #region CREATE FLOW
             //LLAMO AL SERVICIO FLOW Y CREO UN FLOW AL CONTACTO CON LOS STATUS EN FALSE
             var idContacto = "5c9ba0766aa59e1350466315";
             var clienteFlow = new TinyRestClient(new HttpClient(), LoadBalancer.FlowService.server.url);
             var resClienteFlow = clienteFlow.PostRequest("flow/" + idContacto).ExecuteAsync<bool>();
+            #endregion
 
-
-
+            #region CREATE TIMELINE
             //CREO UN TIMELINE AL FLOW DEL TIPO CONTACTO CREADO 
             // var createTimeline = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
             var timeLineRest = clienteFlow.PostRequest("addToFlow/" + idContacto).
@@ -66,6 +69,7 @@ namespace LibCore
                 AddFormParameter("visto", "false").
                 AddFormParameter("terminado", "false").
                 ExecuteAsync<bool>();
+            #endregion
 
         }
 

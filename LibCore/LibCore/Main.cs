@@ -17,10 +17,7 @@ namespace LibCore
             // 3. Que usuario está detras de la peticion y rol
             // 4. devuelve la peticion.
 
-
             MLoadBalancer checkServer = new QLoadBalancer().GetBalancerInfo();
-
-
 
             Contacto = new CContacto(checkServer);
 

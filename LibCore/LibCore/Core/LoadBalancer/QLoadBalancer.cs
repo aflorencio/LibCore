@@ -21,7 +21,7 @@ namespace LibCore
                 var data = _loadBalancerCollection.Find(filter).FirstOrDefault();
                 return data;
             }
-            catch
+            catch (Exception e)
             {
                 return null;
             }

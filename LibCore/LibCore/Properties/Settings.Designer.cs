@@ -41,27 +41,21 @@ namespace LibCore.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("LoadBalancer")]
         public string collection {
             get {
                 return ((string)(this["collection"]));
             }
-            set {
-                this["collection"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5cb59c80346f881df4f83199")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5cd53b57d3a6e70f5860f92b")]
         public string id {
             get {
                 return ((string)(this["id"]));
-            }
-            set {
-                this["id"] = value;
             }
         }
     }

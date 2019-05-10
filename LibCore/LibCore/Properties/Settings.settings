@@ -8,11 +8,11 @@
     <Setting Name="database" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Gateway</Value>
     </Setting>
-    <Setting Name="collection" Type="System.String" Scope="User">
+    <Setting Name="collection" Type="System.String" Scope="Application">
       <Value Profile="(Default)">LoadBalancer</Value>
     </Setting>
-    <Setting Name="id" Type="System.String" Scope="User">
-      <Value Profile="(Default)">5cb59c80346f881df4f83199</Value>
+    <Setting Name="id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5cd53b57d3a6e70f5860f92b</Value>
     </Setting>
   </Settings>
 </SettingsFile>

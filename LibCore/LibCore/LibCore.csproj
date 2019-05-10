@@ -77,7 +77,7 @@
     <Compile Include="Core\Contacto\IContacto.cs" />
     <Compile Include="Core\Rastreo\IRastreo.cs" />
     <Compile Include="Core\Log\ILog.cs" />
-    <Compile Include="IPresupuesto.cs" />
+    <Compile Include="Core\Presupuesto\IPresupuesto.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Core\Contacto\MContacto.cs" />
     <Compile Include="Core\LoadBalancer\MLoadBalancer.cs" />

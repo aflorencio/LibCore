@@ -47,13 +47,6 @@
       <FileName>Core\Contacto\MContacto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LibCore.MLoadBalancer">
-    <Position X="3.75" Y="16.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAACAA=</HashCode>
-      <FileName>Core\LoadBalancer\MLoadBalancer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="LibCore.QLoadBalancer">
     <Position X="10.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
@@ -138,7 +131,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAACAACAAAAAAAAgAKgAAAAACAAAgAAAAACQQAAA=</HashCode>
-      <FileName>IPresupuesto.cs</FileName>
+      <FileName>Core\Presupuesto\IPresupuesto.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="IFlow" />
