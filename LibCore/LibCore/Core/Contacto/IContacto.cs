@@ -26,15 +26,15 @@ namespace LibCore
         /// <summary>
         /// Lee todos los contactos de la base de datos CRUD
         /// </summary>
-        Task<string> ReadAllContacto();
+        Task<List<MContacto>> ReadAllContacto();
         /// <summary>
         /// Muestra la informacion de un contacto CRUD
         /// </summary>
-        void ReadOneContacto();
+        Task<MContacto> ReadOneContacto(string idContacto);
         /// <summary>
         /// Borra o hace invisible un contacto.
         /// </summary>
-        void DeleteContacto();
+        Task DeleteContacto(string idContacto);
         /// <summary>
         /// Retorna el estado de la toma de contacto.
         /// </summary>

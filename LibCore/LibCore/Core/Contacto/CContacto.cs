@@ -73,19 +73,32 @@ namespace LibCore
 
         }
 
-        public void DeleteContacto()
+        public async Task DeleteContacto(string idContacto)
         {
-            throw new System.NotImplementedException();
+
+            var client = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
+            var contacto = await client.PostRequest("contacto" + "/" + idContacto).ExecuteAsync<MContacto>();
+
         }
 
-        public Task<string> ReadAllContacto()
+        public async Task<List<MContacto>> ReadAllContacto()
         {
-            throw new System.NotImplementedException();
+            #region READ ALL CONTACTO
+            var client = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
+            var contacto = await client.GetRequest("contacto").ExecuteAsync<List<MContacto>>();
+            #endregion
+
+            return contacto;
+            //throw new System.NotImplementedException();
         }
 
-        public void ReadOneContacto()
+        public async Task<MContacto> ReadOneContacto(string idContacto)
         {
-            throw new System.NotImplementedException();
+            var client = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
+            var contacto = await client.GetRequest("contacto" + "/" + idContacto).ExecuteAsync<MContacto>();
+
+            return contacto;
+            //throw new System.NotImplementedException();
         }
 
         public void UpdateContacto()
@@ -107,5 +120,6 @@ namespace LibCore
         {
             throw new System.NotImplementedException();
         }
+
     }
 }

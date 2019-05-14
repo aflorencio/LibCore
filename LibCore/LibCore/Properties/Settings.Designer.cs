@@ -52,7 +52,7 @@ namespace LibCore.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5cd53b57d3a6e70f5860f92b")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5cd92ef1c196a164548a4bf7")]
         public string id {
             get {
                 return ((string)(this["id"]));
