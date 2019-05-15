@@ -22,7 +22,7 @@ namespace LibCore
         /// <summary>
         /// Modifica contacto CRUD
         /// </summary>
-        void UpdateContacto();
+        void UpdateContacto(string idContacto, string name, string valor);
         /// <summary>
         /// Lee todos los contactos de la base de datos CRUD
         /// </summary>
