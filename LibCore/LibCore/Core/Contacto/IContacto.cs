@@ -18,7 +18,7 @@ namespace LibCore
         /// - Al crear un contacto nuevo se insertara en el FlowService. (RabbitMQ)
         ///  -Al crear lo inserto en ticketService. (RabbitMQ)
         /// </remarks>
-        void CreateContacto(string nombre, string apellidos, string dni, string cif, string direccion, string localidad, string provincia, string cp, string pais, string telefono1, string telefono2, string email1, string email2, string langNative, string particularEmpresa, string descripcionCaso, string fuenteCliente);
+        void CreateContacto(MContacto data);
         /// <summary>
         /// Modifica contacto CRUD
         /// </summary>
@@ -38,7 +38,7 @@ namespace LibCore
         /// <summary>
         /// Retorna el estado de la toma de contacto.
         /// </summary>
-        void TomaDeContacto();
+        Task<bool> TomaDeContacto(string idContacto);
         /// <summary>
         /// Modifica el estado de la toma de contacto TRUE o FALSE
         /// </summary>

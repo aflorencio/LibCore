@@ -25,9 +25,11 @@ namespace LibCore
         public string langNative { get; set; }
         public string comercialAsignado { get; set; }
         public string particularEmpresa { get; set; }
-        public string desCasoCliente { get; set; }
-        public string informeGestor { get; set; }
-        public string informacionComercial { get; set; }
-        public bool tomaContacto { get; set; }
+        public string descripcionCaso { get; set; }
+        public bool recibidoPorSecretaria { get; set; }
+        public string fuentePosibleCliente { get; set; }
+        public string rol { get; set; } = "contacto";
+        public bool tomaContacto { get; set; } = false;
+
     }
 }
