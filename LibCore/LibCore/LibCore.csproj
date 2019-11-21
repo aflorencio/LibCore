@@ -81,6 +81,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="Core\Contacto\MContacto.cs" />
     <Compile Include="Core\LoadBalancer\MLoadBalancer.cs" />
+    <Compile Include="Core\Rastreo\MRastreo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\QueueNotification\IQueueNotification.cs" />
     <Compile Include="Core\Ticket\ITicket.cs" />

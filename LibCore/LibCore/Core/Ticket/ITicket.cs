@@ -10,7 +10,6 @@ namespace LibCore
         IQueueNotification IQueueNotification { get; set; }
 
         void CreateTicket();
-        void CreateComentarioTicket();
         /// <summary>
         /// Alomejor ni se puede modificar.
         /// </summary>

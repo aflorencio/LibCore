@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="LibCore.CContacto">
-    <Position X="0.5" Y="11.25" Width="2.5" />
+    <Position X="0.5" Y="11.25" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAgAAAABAAAEgBEAAAARCAAA=</HashCode>
       <FileName>Core\Contacto\CContacto.cs</FileName>
@@ -9,9 +9,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CRastreo">
-    <Position X="3.25" Y="11.25" Width="2" />
+    <Position X="5.25" Y="11.25" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAQACABAAAAAAAACAAIgAAAQAAAAAoAAAAAAQAAEA=</HashCode>
+      <HashCode>AAAAQACABAAAAAAAACAAIgAAAQAAAAAoBAAAAAQAAEA=</HashCode>
       <FileName>Core\Rastreo\CRastreo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -25,15 +25,15 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CTicket">
-    <Position X="5" Y="7.75" Width="2.5" />
+    <Position X="5" Y="7.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AABAAgggAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
+      <HashCode>AABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAIAQAAEA=</HashCode>
       <FileName>Core\Ticket\CTicket.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LibCore.CQueueNotification">
-    <Position X="7.75" Y="7.75" Width="2.5" />
+    <Position X="8.75" Y="7.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgCABAAABAAAAAAAAAAAAAEAAAAAACA=</HashCode>
       <FileName>Core\QueueNotification\CQueueNotification.cs</FileName>
@@ -43,12 +43,12 @@
   <Class Name="LibCore.MContacto">
     <Position X="0.5" Y="16.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAlAAQEIECkAABIAgAAAIACAAAAAAAABARAAAM=</HashCode>
+      <HashCode>ABAAAAAlAAQEIECkAABIAAACAAACAAAAAAAAQARAAAM=</HashCode>
       <FileName>Core\Contacto\MContacto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LibCore.QLoadBalancer">
-    <Position X="10.5" Y="7.75" Width="1.5" />
+    <Position X="11.5" Y="7.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\LoadBalancer\QLoadBalancer.cs</FileName>
@@ -57,12 +57,26 @@
   <Class Name="LibCore.Start">
     <Position X="0.5" Y="7.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAA=</HashCode>
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="LibCore.Link">
+    <Position X="3.75" Y="18.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAACAABBAIAAAAAAIAAAAIAAAAIAAABA=</HashCode>
+      <FileName>Core\Rastreo\MRastreo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibCore.Mrastreo">
+    <Position X="3.75" Y="16.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAIAQAAEAAAAAAAAAA=</HashCode>
+      <FileName>Core\Rastreo\MRastreo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="LibCore.IRastreo">
-    <Position X="3.5" Y="3.75" Width="2.5" />
+    <Position X="5.25" Y="4" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAQACABAAAAAAAACAAIgAAAQAAAAAoAAAAAAQAAEA=</HashCode>
       <FileName>Core\Rastreo\IRastreo.cs</FileName>
@@ -74,7 +88,7 @@
     </ShowAsAssociation>
   </Interface>
   <Interface Name="LibCore.IContacto">
-    <Position X="0.5" Y="3.75" Width="2.75" />
+    <Position X="0.5" Y="4" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAgAAAABAAAEgAEAAAARCAAA=</HashCode>
       <FileName>Core\Contacto\IContacto.cs</FileName>
@@ -94,7 +108,7 @@
   <Interface Name="LibCore.ITicket">
     <Position X="3" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AABAAgggAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
+      <HashCode>AABAAgAgAAAAAAAAAAAAAAgAAAAAgAAAAIAAAAQAAEA=</HashCode>
       <FileName>Core\Ticket\ITicket.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -123,10 +137,10 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="LibCore.IPresupuesto">
-    <Position X="6.25" Y="3.75" Width="3" />
+    <Position X="9.75" Y="4" Width="3" />
     <AssociationLine Name="IQueueNotification" Type="LibCore.IQueueNotification">
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.12" Y="0.06" Height="0.162" Width="1.194" />
+        <Position X="0.06" Y="0.12" Height="0.162" Width="1.194" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>

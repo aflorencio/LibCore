@@ -23,6 +23,7 @@ namespace LibCore
         public string pais { get; set; }
         public string lang { get; set; }
         public string langNative { get; set; }
+        public string partnerAsignado { get; set; }
         public string comercialAsignado { get; set; }
         public string particularEmpresa { get; set; }
         public string descripcionCaso { get; set; }

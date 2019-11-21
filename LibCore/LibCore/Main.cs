@@ -9,6 +9,7 @@ namespace LibCore
     {
         //public CoreLib.Core.lib.IContactoComercial Contacto;
         public IContacto Contacto;
+        public IRastreo Rastreo;
 
         public Start(string token)
         {
@@ -20,6 +21,7 @@ namespace LibCore
             MLoadBalancer checkServer = new QLoadBalancer().GetBalancerInfo();
 
             Contacto = new CContacto(checkServer);
+            Rastreo = new CRastreo(checkServer);
 
         }
 

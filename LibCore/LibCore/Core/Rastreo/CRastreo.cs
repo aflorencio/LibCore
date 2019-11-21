@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
+using Tiny.RestClient;
 
 namespace LibCore
 {
@@ -12,19 +15,37 @@ namespace LibCore
         public ITicket ITicket { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IQueueNotification IQueueNotification { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public void CreateLinkRastreo()
+        public MLoadBalancer LoadBalancer;
+
+        public CRastreo(MLoadBalancer balancer)
         {
-            throw new System.NotImplementedException();
+            LoadBalancer = balancer;
         }
 
-        public void CreateRastreo()
+        public async Task CreateLinkRastreo(Link data, string id)
         {
-            throw new System.NotImplementedException();
+
+            #region CREATE LINK
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var response2 = await client.PostRequest("rastreo/addLink?id=" + id, data).ExecuteAsync<bool>();
+            #endregion
+
         }
 
-        public void DeleteRastreo()
+        public async Task CreateRastreo(Mrastreo data)
         {
-            throw new System.NotImplementedException();
+            #region CREATE RASTREO
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var response2 = await client.PostRequest("rastreo/add", data).ExecuteAsync<bool>();
+            #endregion
+        }
+
+        public async Task DeleteRastreo(string id)
+        {
+            #region DELETE RASTREO
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var response2 = await client.DeleteRequest("rastreo/delete?id="+id).ExecuteAsync<bool>();
+            #endregion
         }
 
         public void RastreoFinalizado()
@@ -37,19 +58,30 @@ namespace LibCore
             throw new NotImplementedException();
         }
 
-        public void ReadAllRastreo()
+        public async Task<List<Mrastreo>> ReadAllRastreo()
         {
-            throw new System.NotImplementedException();
+            #region READ ALL RASTREO
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var contacto = await client.GetRequest("rastreo/all").ExecuteAsync<List<Mrastreo>>();
+            #endregion
+
+            return contacto;
+
         }
 
-        public void ReadOneRastreo()
+        public async Task<Mrastreo> ReadOneRastreo(string id)
         {
-            throw new System.NotImplementedException();
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var rastreo = await client.GetRequest("rastreo" + "/one?id=" + id).ExecuteAsync<Mrastreo>();
+
+            return rastreo;
+
         }
 
-        public void UpdateRastreo()
+        public void UpdateRastreo(string idContacto, string name, string valor)
         {
-            throw new NotImplementedException();
+            var client = new TinyRestClient(new HttpClient(), "http://localhost:5002/api");
+            var contacto = client.PutRequest("rastreo" + "/update?id=" + idContacto + "&name=" + name + "&value=" + valor).ExecuteAsync<MContacto>();
         }
     }
 }

@@ -23,25 +23,7 @@ namespace LibCore
         public void CreateContacto(MContacto data)
         {
             #region CREATE USUARIO
-            var client = new TinyRestClient(new HttpClient(), LoadBalancer.ContactoService.server.url);
-
-            //MContacto data = new MContacto();
-            //data.nombre = nombre == "" ? null : nombre;
-            //data.apellidos = apellidos == "" ? null : apellidos;
-            //data.dni = dni == "" ? null : dni;
-            //data.cif = cif == "" ? null : cif;
-            //data.direccion = direccion == "" ? null : direccion;
-            //data.municipio = localidad == "" ? null : localidad;
-            //data.provincia = provincia == "" ? null : provincia;
-            //data.codPostal = cp == "" ? null : provincia;
-            //data.pais = pais == "" ? null : pais;
-            //data.telefono1 = telefono1 == "" ? null : telefono1;
-            //data.telefono2 = telefono2 == "" ? null : telefono2;
-            //data.email1 = email1 == "" ? null : email1;
-            //data.email2 = email2 == "" ? null : email2;
-            //data.langNative = langNative == "" ? null : langNative;
-            //data.particularEmpresa = particularEmpresa == "" ? null : particularEmpresa;
-            //data.desCasoCliente = descripcionCaso == "" ? null : descripcionCaso;
+            var client = new TinyRestClient(new HttpClient(), "http://127.0.0.1:5001/api/");
 
             var response2 = client.PostRequest("contacto/add", data).ExecuteAsync<bool>();
             #endregion

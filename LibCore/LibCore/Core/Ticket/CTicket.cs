@@ -14,7 +14,7 @@ namespace LibCore
             throw new System.NotImplementedException();
         }
 
-        public void CreateComentarioTicket()
+        public void CreateMensajeTicket()
         {
             throw new System.NotImplementedException();
         }

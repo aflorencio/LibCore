@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LibCore
 {
@@ -25,14 +26,14 @@ namespace LibCore
         /// - Al crear un nuevo Rastreo notificar en la QueueNotificationService
         /// - Si creas un rastreo y en éste está marcado la solicitud de rastreo este lo enviara a QueueNotificationService. Si no esta marcado como solicitud de rastreo entonces no notificará.
         /// </remarks>
-        void CreateRastreo();
-        void ReadAllRastreo();
-        void ReadOneRastreo();
-        void UpdateRastreo();
+        Task CreateRastreo(Mrastreo data);
+        Task<List<Mrastreo>> ReadAllRastreo();
+        Task<Mrastreo> ReadOneRastreo(string id);
+        void UpdateRastreo(string idContacto, string name, string valor);
         /// <summary>
         /// Delete no borrará solo ocultara un campo de visible si o no
         /// </summary>
-        void DeleteRastreo();
+        Task DeleteRastreo(string id);
         /// <summary>
         /// Return bool si el rastreo se ha terminado o no.
         /// </summary>
@@ -53,6 +54,6 @@ namespace LibCore
         /// - Si se añade un link al rastreo este pondra de nuevo el modelo como no finalizado. Pondra el estado como FLASE el finalizado como FALSE lo comprobará si está en TRUE lo pone como false llamando a RastreoFinalizado(false). Este enviara de nuevo un flow y una notificacion (esto en el metodo de rastreoFinalizado).
         /// -Si el estado está ya cerrado inserta un enlace con normalidad y no hace nada mas.
         /// </remarks>
-        void CreateLinkRastreo();
+        Task CreateLinkRastreo(Link data, string id);
     }
 }
